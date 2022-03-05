@@ -1,0 +1,15 @@
+状态机可分为以下两种类型：
+Moore型：输出是当前状态的函数。
+Mealy型：输出是当前状态和输入的函数。
+
+Mealy型状态机的输出在输入变化的时候立刻发生变化；
+Moore型状态机在输入变化后，还必须等待时钟的到来，时钟使状态发生变化时才导致输出的变化。
+
+Mealy型状态机一旦输入信号发生变化或者状态发生变化，输出信号立即发生变化。
+
+Mealy and Moore state machines differ in these ways.
+
+The output of a Mealy state machine is a function of the current state and inputs.
+
+The output of a Moore state machine is a function of the current state only.
+
