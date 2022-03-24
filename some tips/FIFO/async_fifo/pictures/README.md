@@ -5,4 +5,4 @@
 
 ![读指针和读空信号的产生](./rptr_empty_rptr_empty_RTLViewer.jpg "读指针和读空信号的产生")
 ![写指针和写满信号的产生](./wptr_full_wptr_full_RTLViewer.jpg "写指针和写满信号的产生")
-
+![Gray码计数器](./Gray码计数器.png "Gray码计数器")
