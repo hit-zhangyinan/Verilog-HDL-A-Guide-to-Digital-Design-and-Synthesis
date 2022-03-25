@@ -70,7 +70,7 @@ initial begin
     #200    winc = 0;   rinc = 1;
 end
 
-always @ (posedge rclk)
+    always @ (negedge wclk)
 begin
     if ( wrst_n == 0 )
         wdata <= 0;
