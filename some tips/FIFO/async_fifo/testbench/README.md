@@ -18,12 +18,4 @@
 第15个时钟上升沿到来时，`wgraynext == 5'b11_000, wq2_rptr == 5'b00_000`，此时`wfull_val = 1`，`wfull = 0`<br>
 第16个时钟上升沿到来时，`wfull = 1`<br>
 
-# 对仿真波形的分析
-
-![testbench wave at 165 ns](./"testbench wave at 165 ns.png" "testbench wave at 165 ns")
-如上图所示：<br><br>
-
-撤掉复位信号后的第1个写时钟上升沿在`15 ns`，撤掉复位信号后的第16个写时钟上升沿在 `165 ns`<br>
-在`waddr`从`4'hf(4'b1111)`变为`4'h0(4'b0000)`时，`wfull`从0变为1，`wdata = 8'h0d`写入到`waddr = 4'hf`中，在读出时，`raddr = 4'hf`上的`rdata = 8'h0d`，这说明数据写入到改变之前的地址。<br>
-
-`winc = 0, rinc = 1`之后的第16个读时钟上升沿在`390 ns`，此时`raddr`从`4'hf`变为`4'h0`，`rempty`从0变为1，`raddr = 4'h0`上的`rdata = 8'h00`<br>
+从 testbench_wave.pdf 文件可知，数据写入到改变之前的地址（即`wdata`写入前一个`waddr`中）。<br>
