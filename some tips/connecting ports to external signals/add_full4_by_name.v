@@ -6,7 +6,7 @@ module add_full4_by_name(A, B, C, S);
     output [4:0] C;
     assign C[0] = 0;
     
-    // "son module name" + "a user-defined name" + ( ."son module port name"(Current module port name) )
+    // "son module name" + "a user-defined name" + ( ."son module port name"( Current module port name or internal signals ) )
     // "son module" is same as "called module"
     // This way is recommended.
     add_full u1( .A(A[0]), .B(B[0]), .C(C[0]), .Carry(C[1]), .S(S[0]) );
